@@ -22,12 +22,7 @@ const posts = collection(firestore, "posts");
  * @param {String} content - Text content of the post
  */
 export async function createPost(user, content) {
-  await addDoc(posts, {
-    user,
-    content,
-    likes: [],
-    createdAt: Timestamp.now(),
-  });
+  // TODO: Implement adding a post to Firestore
 }
 
 /**
@@ -43,9 +38,7 @@ export async function createPost(user, content) {
  * }>} List of queried posts.
  */
 export async function fetchPosts() {
-  const q = query(posts);
-  const querySnapshot = await getDocs(q);
-  return querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+  // TODO: Implement fetching posts from Firestore
 }
 
 /**
@@ -56,8 +49,7 @@ export async function fetchPosts() {
  * @param {String} uid - ID of the User liking the Post
  */
 export async function likePost(id, uid) {
-  const post = doc(firestore, "posts", id);
-  await updateDoc(post, { likes: arrayUnion(uid) });
+  // TODO: Implementing updating post by adding like
 }
 
 /**
@@ -68,6 +60,5 @@ export async function likePost(id, uid) {
  * @param {String} uid - ID of the User liking the Post
  */
 export async function unlikePost(id, uid) {
-  const post = doc(firestore, "posts", id);
-  await updateDoc(post, { likes: arrayRemove(uid) });
+  // TODO: Implement updating post by removing like
 }
