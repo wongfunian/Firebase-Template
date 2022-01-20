@@ -1,0 +1,372 @@
+// written by Fu Nian
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.social-media {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+  bottom: 20px;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+  position: absolute;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+.expand {
+  transform: rotate(180deg);
+  box-shadow: 0 0 10px grey;
+}
+
+.shrink {
+  transform: rotate(0deg);
+}
+
+.facebook {
+  opacity: 0;
+  position: absolute;
+  background-color: #2b4170;
+  background: -moz-linear-gradient(top, #3b5998, #2b4170);
+  background: -ms-linear-gradient(top, #3b5998, #2b4170);
+  background: -webkit-linear-gradient(top, #3b5998, #2b4170);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  color: white;
+  line-height: 53px;
+  font-size: 25px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.facebook:hover {
+  transform: translateY(-60px) scale(1.1);
+  box-shadow: 0 0 10px grey;
+}
+
+.instagram {
+  opacity: 0;
+  position: absolute;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  color: white;
+  line-height: 53px;
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.instagram:hover {
+  transform: translateY(-120px) scale(1.1);
+  box-shadow: 0 0 10px grey;
+}
+
+.linkedin {
+  opacity: 0;
+  position: absolute;
+  background-color: #0e76a8;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  color: white;
+  line-height: 53px;
+  font-size: 25px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.linkedin:hover {
+  transform: translateY(-180px) scale(1.1);
+  box-shadow: 0 0 10px grey;
+}
+
+.discord {
+  opacity: 0;
+  position: absolute;
+  background-color: #5765f2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  color: white;
+  line-height: 53px;
+  font-size: 25px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.discord:hover {
+  transform: translateY(-240px) scale(1.1);
+  box-shadow: 0 0 10px grey;
+}
+
+.website {
+  opacity: 0;
+  position: absolute;
+  background-color: #2b4170;
+  background: -moz-linear-gradient(top, #3b5998, #2b4170);
+  background: -ms-linear-gradient(top, #3b5998, #2b4170);
+  background: -webkit-linear-gradient(top, #3b5998, #2b4170);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  color: white;
+  line-height: 53px;
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.website:hover {
+  transform: translateY(-300px) scale(1.1);
+  box-shadow: 0 0 10px grey;
+}
+
+/*********** facebook ***********/
+.facebook-hide {
+  animation: facebook-hide 0.4s;
+  transform: translateY(0);
+  opacity: 0;
+}
+
+@keyframes facebook-hide {
+  0% {
+    transform: translateY(-60px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.facebook-show {
+  animation: facebook-show 0.1s;
+  transform: translateY(-60px);
+  opacity: 1;
+}
+
+@keyframes facebook-show {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-60px);
+    opacity: 1;
+  }
+}
+
+/*********** instagram ***********/
+.instagram-hide {
+  animation: instagram-hide 0.4s;
+  transform: translateY(0);
+  opacity: 0;
+}
+
+@keyframes instagram-hide {
+  0% {
+    transform: translateY(-120px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.instagram-show {
+  animation: instagram-show 0.2s;
+  transform: translateY(-120px);
+  opacity: 1;
+}
+
+@keyframes instagram-show {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-120px);
+    opacity: 1;
+  }
+}
+
+/*********** linkedin ***********/
+.linkedin-hide {
+  animation: linkedin-hide 0.4s;
+  transform: translateY(0);
+  opacity: 0;
+}
+
+@keyframes linkedin-hide {
+  0% {
+    transform: translateY(-180px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.linkedin-show {
+  animation: linkedin-show 0.3s;
+  transform: translateY(-180px);
+  opacity: 1;
+}
+
+@keyframes linkedin-show {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-180px);
+    opacity: 1;
+  }
+}
+
+/*********** Discord ***********/
+.discord-hide {
+  animation: discord-hide 0.4s;
+  transform: translateY(0);
+  opacity: 0;
+}
+
+@keyframes discord-hide {
+  0% {
+    transform: translateY(-240px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.discord-show {
+  animation: discord-show 0.4s;
+  transform: translateY(-240px);
+  opacity: 1;
+}
+
+@keyframes discord-show {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-240px);
+    opacity: 1;
+  }
+}
+
+/*********** website ***********/
+.website-hide {
+  animation: website-hide 0.4s;
+  transform: translateY(0);
+  opacity: 0;
+}
+
+@keyframes website-hide {
+  0% {
+    transform: translateY(-300px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.website-show {
+  animation: website-show 0.5s;
+  transform: translateY(-300px);
+  opacity: 1;
+}
+
+@keyframes website-show {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-300px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .social-media,
+  .button,
+  .facebook,
+  .instagram,
+  .linkedin,
+  .website,
+  .discord {
+    bottom: 10px;
+    right: 10px;
+  }
+}

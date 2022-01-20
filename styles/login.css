@@ -1,0 +1,94 @@
+// written by Fu Nian
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+}
+
+::placeholder {
+  color: rgb(168, 168, 168);
+}
+
+.loginContainer {
+  padding: 50px;
+  width: 400px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+.logo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.loginContainer input {
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 2px solid rgb(168, 168, 168);
+  width: 100%;
+  padding: 8px 0;
+  margin-top: 20px;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.loginContainer input:focus {
+  border-bottom: 2px solid #3f88ee;
+}
+
+.loginContainer button {
+  border: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.loginContainer .link {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.loginContainer a {
+  text-decoration: none;
+  font-size: 13px;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.loginContainer #login {
+  background: #3f88ee;
+  margin-top: 20px;
+}
+
+.loginContainer #google {
+  background: #fb2b25;
+}
+
+@media (max-width: 500px) {
+  .loginContainer {
+    width: 90%;
+  }
+}

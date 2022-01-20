@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+        <link rel="icon" href="assets/logo.png" type="image/x-icon" />
+        <title>Social Wall</title>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+        <link rel="stylesheet" href="styles/micromodal.css" />
+    </head>
+
+    <body class="bg-neutral-900 text-neutral-200">
+        <div class="mx-auto w-full md:w-2/3 lg:w-1/2 flex flex-col justify-center items-center p-8">
+            <!-- Sign Out Button -->
+            <button
+                id="sign-out-button"
+                class="flex justify-center items-center font-medium fixed bottom-4 left-4 px-3 py-2 bg-blue-500 hover:bg-blue-400 hover:scale-105 transition duration-200 ease-in-out text-neutral-50 rounded-md"
+            >
+                Sign Out
+                <span class="iconify ml-2" data-icon="tabler:logout" data-inline="false"></span>
+            </button>
+
+            <!-- Create Post -->
+            <div class="w-full" id="create-post-div">
+                <span class="iconify w-8 h-8 mx-auto" data-icon="eos-icons:loading" data-inline="false"></span>
+            </div>
+
+            <!-- Create Post Modal -->
+            <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+                <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                        <header class="modal__header">
+                            <h2 class="modal__title" id="modal-1-title">New Post</h2>
+                            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                        </header>
+                        <main class="modal__content" id="modal-1-content">
+                            <textarea
+                                id="new-post-textarea"
+                                class="w-full rounded-sm py-2 px-3 bg-neutral-700 focus:outline-none"
+                                placeholder="Enter your post content here..."
+                                rows="5"
+                                cols="42"
+                            ></textarea>
+                        </main>
+                        <footer class="modal__footer">
+                            <button id="new-post-button" class="modal__btn modal__btn-primary">Create</button>
+                            <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Posts -->
+            <div class="w-full mt-4" id="posts-div">
+                <span class="iconify w-8 h-8 mx-auto" data-icon="eos-icons:loading" data-inline="false"></span>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+        <script src="https://unpkg.com/dayjs@1.8.21/plugin/relativeTime.js"></script>
+        <script type="module" src="src/lib/firebase.js"></script>
+        <script type="module" src="src/index.js"></script>
+    </body>
+</html>
