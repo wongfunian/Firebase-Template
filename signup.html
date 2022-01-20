@@ -4,10 +4,10 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/src/img/logo.png" type="image/x-icon" />
+        <link rel="icon" href="/assets/logo.png" type="image/x-icon" />
         <title>Google Developer Student Club - TARUC</title>
-        <link rel="stylesheet" href="/src/css/signup.css" />
-        <link rel="stylesheet" href="/src/css/socialMedia.css" />
+        <link rel="stylesheet" href="/styles/signup.css" />
+        <link rel="stylesheet" href="/styles/socialMedia.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -19,7 +19,7 @@
     <body>
         <div class="signupContainer">
             <div class="logo">
-                <img src="/src/img/logo2.png" alt="GDSC" />
+                <img src="/assets/logo2.png" alt="GDSC" />
             </div>
             <input id="email" type="email" placeholder="Email" /><br />
             <input id="password" type="password" placeholder="Password" /><br />
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <script src="src/js/socialMedia.js"></script>
+        <script src="src/lib/socialMedia.js"></script>
         <script type="module">
             // Import the functions you need from the SDKs you need
 
@@ -67,7 +67,7 @@
 
                 if (password !== confirmPassword) {
                     alert('Password does not match, please try again');
-                    return false;
+                    return;
                 }
 
                 // Firebase Sign Up Method
